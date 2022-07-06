@@ -1,5 +1,4 @@
 node_modules/
 app/send.php
 app/pug/components/snippets.pug
-WP/
 robots.txt
