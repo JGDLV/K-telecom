@@ -1,0 +1,20 @@
+-
+	var intro = {
+		header: 'Экономия нервов и денег — интернет К-Телеком',
+		list: [
+			'5 тарифов для многоквартирных и 4 для частных домов',
+			'безлимит подключенных устройств',
+			'комфортная поддержка 24/7',
+			],
+		image: 'img/intro-image.png',
+		button: { href: '#tariffs', text: 'Подробнее' }
+	}
+
+section.intro#intro
+	.container
+		img.intro__image(src=intro.image, alt="")
+		h1.intro__header !{intro.header}
+		ul
+			each li in intro.list
+				li !{li}
+		a.intro__button.btn.goto(href=intro.button.href) !{intro.button.text}

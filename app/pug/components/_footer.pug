@@ -1,0 +1,19 @@
+-
+	var footer = {
+		copyright: '2018–2022 ООО «К-Телеком»',
+		social: [
+			{ href: '', className: 'fa-instagram', },
+			{ href: '', className: 'fa-youtube', },
+			{ href: '', className: 'fa-vk', },
+		],
+	}
+
+footer.footer
+	.container
+		.footer__inner
+			a.logo(href="/")
+				img.logo__image(src=header.logo, alt="")
+			p.copyright © !{footer.copyright}
+			.social
+				each social in footer.social
+					a.social__item.fab(href=social.href, class=social.className)

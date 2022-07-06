@@ -1,0 +1,26 @@
+-
+	var order = {
+		header: 'Подключиться просто!',
+		options: [
+			'Интернет',
+			'Интернет + ТВ',
+			'Телефония',
+			'Видеонаблюдение',
+		]
+	}
+
+section.order#order
+	.container
+		.order__inner 
+			h2.order__header !{order.header}
+			form.order-form
+				.order-form__options
+					each option in order.options
+						.order-form__option !{option}
+				.order-form__inner 
+					input.order-form__input.order-form__name(type="text" name="name" placeholder="Имя")
+					input.order-form__input.order-form__phone(type="text" name="phone" placeholder="Номер телефона *" required)
+					button.order-form__button.btn(type="submit") Отправить
+					label.order-form__privacy
+						input(type="checkbox" required)
+						| Я соглашаюсь на условия #[a(href="#") обработки данных]

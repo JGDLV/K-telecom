@@ -1,0 +1,153 @@
+// @media (min-width: 576px)
+// 	.container
+// 		max-width: 540px
+
+// @media (min-width: 768px)
+// 	.container
+// 		max-width: 720px
+
+// @media (min-width: 992px)
+// 	.container
+// 		max-width: 960px
+
+// @media (min-width: 1200px)
+// 	.container
+// 		max-width: 1200px
+
+@media (max-width: 1919px)
+	.tariffs-items
+		.owl-item:first-child
+			// margin-left: 0
+
+@media (max-width: 1200px)
+	.intro
+		padding: 30px 0
+
+	.tariffs
+		padding: 30px 0
+
+@media (max-width: 992px)
+	.intro
+		&__image
+			position: static
+		&__header
+			max-width: 100%
+
+	.order
+		&__inner
+			padding: 30px
+
+@media (max-width: 768px)
+	.order
+		&-form
+			&__inner
+				grid-template-columns: 1fr
+			&__privacy
+				grid-column: 1
+			&__option
+				width: auto
+				padding: 6.5px 10px
+
+@media (max-width: 576px)
+	h2
+		font-size: 18px
+		line-height: 1.5
+
+	.container
+		padding: 0 10px
+
+	.btn
+		font-size: 12px
+		height: 40px
+
+	.header
+		padding: 5px 0
+
+	.intro
+		padding: 20px 0 10px
+		&__image
+			display: block
+			margin: 0 auto 20px
+		&__header
+			font-size: 20px
+			line-height: 1.5
+		&__list
+			font-size: 13px
+			margin-bottom: 20px
+		&__button
+			width: 100%
+
+	.footer
+		padding: 19px 0 5px
+		&__inner
+			border-bottom: 0
+
+	.copyright
+		order: 2
+		margin-left: 0
+		width: 100%
+
+	.social
+		a
+			width: 25px
+			height: 25px
+			font-size: 13px
+
+	.order
+		&__inner
+			padding: 10px 10px 20px
+		&-form
+			&__option
+				margin-bottom: 5px
+				font-size: 11px
+			&__inner
+				grid-gap: 10px
+			&__input
+				height: 40px
+			&__privacy
+				font-size: 12px
+				line-height: 1.5
+		&__inner
+			margin-left: -10px
+			margin-right: -10px
+
+	.tariffs
+		padding-bottom: 20px
+		&__header
+			margin-bottom: -10px
+		&__item
+			line-height: 1.5
+			padding: 20px
+			&-title
+				font-size: 16px
+				margin-bottom: 0
+			&-speed
+				&-label
+					font-size: 10px
+					margin-bottom: 0
+				&-value
+					font-size: 18px
+			&-description
+				font-size: 12px
+				line-height: 1.5
+			&-tv
+				font-size: 12px
+				line-height: 1.5
+				margin-bottom: 0
+			&-price
+				&-value
+					font-size: 25px
+			&-footnote
+				font-size: 10px
+				line-height: 1.5
+
+	// .tariffs-items
+		// .owl-item:first-child
+			// margin-left: -41px
+
+	.menu-toggle
+		display: flex
+
+@media (max-width: 400px)
+	.copyright
+		max-width: 50%

@@ -1,0 +1,52 @@
+-
+	var tariffs = {
+		header: 'Тарифные планы',
+		items: [
+			{
+				title: 'Мой клик',
+				speed: 'до 40 Мбит/с',
+				description: 'Отличный вариант для пенсионеров, выполнения определенных задач и работе с файлами различных размеров.',
+				price: '399',
+				button: { href: '#', text: 'Выбрать тариф' },
+			},
+			{
+				title: 'Резвый клик',
+				speed: '80-100 Мбит/с',
+				description: 'Отличный вариант для всей семьи. Общайтесь в соцсетях и смотрите любимые фильмы и сериалы!',
+				price: '449',
+				button: { href: '#', text: 'Выбрать тариф' },
+			},
+			{
+				title: 'Мой клик',
+				speed: 'до 40 Мбит/с',
+				description: 'Отличный вариант для пенсионеров, выполнения определенных задач и работе с файлами различных размеров.',
+				price: '399',
+				button: { href: '#', text: 'Выбрать тариф' },
+			},
+			{
+				title: 'Резвый клик',
+				speed: '80-100 Мбит/с',
+				description: 'Отличный вариант для всей семьи. Общайтесь в соцсетях и смотрите любимые фильмы и сериалы!',
+				price: '449',
+				button: { href: '#', text: 'Выбрать тариф' },
+			},
+		],
+	}
+
+section.tariffs#tariffs
+	.container
+		h2.tariffs__header !{tariffs.header}
+	.tariffs-items.owl-carousel
+		each item in tariffs.items
+			article.tariffs__item
+				h1.tariffs__item-title !{item.title}
+				.tariffs__item-speed
+					p.tariffs__item-speed-label Скорость интернета
+					p.tariffs__item-speed-value !{item.speed}
+				.tariffs__item-description !{item.description}
+				.tariffs__item-tv ТВ + 100 ₽ <br>(пакет “Базовый”)
+				.tariffs__item-price
+					span.tariffs__item-price-value !{item.price} ₽ 
+					span.tariffs__item-price-period в месяц
+				.tariffs__item-footnote *итоговая цена зависит от варианта оплаты и пакета ТВ при необходимости
+				a.tariffs__item-button.btn(href=item.button.href) !{item.button.text}

@@ -1,0 +1,291 @@
+$basic: #2D2D2D
+$gray: #F2F6F8
+$blue: #0099C8
+$red: #C81059
+
++font('Cera Round Pro', 'CeraRoundPro-Thin', $weight: 100, $style: normal)
++font('Cera Round Pro', 'CeraRoundPro-Light', $weight: 300, $style: normal)
++font('Cera Round Pro', 'CeraRoundPro-Regular', $weight: 400, $style: normal)
++font('Cera Round Pro', 'CeraRoundPro-Medium', $weight: 500, $style: normal)
++font('Cera Round Pro', 'CeraRoundPro-Bold', $weight: 700, $style: normal)
++font('Cera Round Pro', 'CeraRoundPro-Black', $weight: 900, $style: normal)
+
+body
+	font-family: 'Cera Round Pro', sans-serif
+	font-size: 16px
+	line-height: normal
+	font-weight: 400
+	color: $basic
+	letter-spacing: 0.02em
+
+.container
+	max-width: 930px
+	padding: 0 15px
+	margin: 0 auto
+	position: relative
+
+.btn
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+	background: $red
+	color: #fff
+	border-radius: 5px
+	max-width: 100%
+	font-size: 14px
+	font-weight: 500
+	line-height: 21px
+	height: 45px
+	padding: 0 15px
+	border: 1px solid $red
+	&:hover
+		background: none
+		color: $red
+
+.header
+	padding: 22px 0 15px
+
+.intro
+	background: $gray
+	padding: 87px 0 89px
+	&__image
+		position: absolute
+		top: -19px
+		right: 14px
+		z-index: 10
+	&__header
+		font-size: 30px
+		font-weight: 700
+		line-height: 45px
+		max-width: 435px
+		margin-bottom: 19px
+		letter-spacing: 0.02em
+	ul
+		max-width: 500px
+		margin-bottom: 36px
+		li
+			position: relative
+			padding-left: 24px
+			margin-bottom: 12px
+			&:last-child
+				margin-bottom: 0
+			&::before
+				+p
+				top: 8px
+				left: 10px
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background: #555555
+	&__button
+		width: 203px
+
+h2
+	font-size: 28px
+	font-weight: 500
+	line-height: 42px
+	letter-spacing: 0.02em
+
+.tariffs
+	padding: 51px 0 20px
+	&__header
+		margin-bottom: -1px
+	&-items
+		display: flex
+		.owl-stage-outer
+			padding: 35px 0
+		// .owl-item
+			// &:first-child
+				// margin-left: -95px
+	&__item
+		background: #FFFFFF
+		border-radius: 10px
+		box-shadow: 0px 12px 25px rgba(90, 90, 90, 0.12)
+		padding: 29px 30px 30px
+		&-title
+			font-size: 20px
+			font-weight: 500
+			line-height: 30px
+			margin-bottom: 14px
+		&-speed
+			margin-bottom: 5px
+			&-label
+				color: #ACACAC
+				font-family: 'Open Sans', sans-serif
+				font-size: 14px
+				line-height: 21px
+				margin-bottom: 4px
+			&-value
+				color: $red
+				font-size: 25px
+				font-weight: 500
+				line-height: 38px
+				letter-spacing: 0.02em
+		&-description
+			color: #555555
+			font-family: 'Open Sans', sans-serif
+			font-size: 13px
+			line-height: 20px
+			margin-bottom: 25px
+			min-height: 60px
+		&-tv
+			font-size: 14px
+			line-height: 21px
+			padding-left: 33px
+			position: relative
+			margin-bottom: 18px
+			cursor: pointer
+			&::before, &::after
+				+p
+				height: 23px
+				width: 23px
+				left: 0px
+				top: -1px
+				border-radius: 2px
+				border: 2px solid rgba(45, 45, 45, 0.1)
+				+tr
+			&::after
+				opacity: 0
+				background: $blue url('../img/check.svg') no-repeat center
+			&.active
+				&::after
+					opacity: 1
+		&-price
+			display: flex
+			align-items: center
+			margin-bottom: 4px
+			&-value
+				font-size: 40px
+				font-weight: 700
+				line-height: 60px
+				margin-right: 14px
+				letter-spacing: 0.02em
+			&-period
+				color: rgba(85, 85, 85, 0.5)
+				margin-top: 5px
+		&-footnote
+			color: rgba(85, 85, 85, 0.5)
+			font-size: 12px
+			line-height: 18px
+			margin-bottom: 20px
+		&-button
+			&.active
+				background: $blue
+				border-color: $blue
+				color: #fff !important
+
+.order
+	&__inner
+		background: $gray
+		border-radius: 20px
+		padding: 49px 50px 87px
+	&__header
+		margin-bottom: 21px
+
+	&-form
+		&__options
+			display: flex
+			flex-wrap: wrap
+			margin-bottom: 20px
+		&__option
+			border: 1px solid rgba(45, 45, 45, 0.1)
+			border-radius: 10px
+			font-size: 12px
+			line-height: 18px
+			padding: 7.5px 10px
+			margin-right: 10px
+			width: 147px
+			cursor: pointer
+			text-align: center
+			+tr
+			&.active, &:hover
+				color: $blue
+				border-color: $blue
+			&:last-child
+				margin-right: 0
+		&__input
+			background: #FFFFFF
+			border-radius: 2px
+			padding: 0 25px
+			height: 45px
+			font-size: 12px
+			&::placeholder
+				color: rgba(45, 45, 45, 0.3)
+		&__inner
+			display: grid
+			grid-gap: 21px 30px
+			grid-template-columns: repeat(3, 1fr)
+		&__privacy
+			grid-column: span 3
+			color: #989898
+			font-size: 14px
+			line-height: 21px
+			padding-left: 25px
+			position: relative
+			a
+				color: #989898
+				border-bottom: 1px solid #989898
+				line-height: 1
+				display: inline-block
+				&:hover
+					border-bottom-color: transparent
+			&::before, &::after
+				+p
+				height: 23px
+				width: 23px
+				left: 0px
+				top: -1px
+				border-radius: 2px
+				border: 2px solid rgba(45, 45, 45, 0.1)
+				+tr
+			&::after
+				opacity: 0
+				background: $blue url('../img/check.svg') no-repeat center
+			&.active
+				&::after
+					opacity: 1
+
+.footer
+	padding: 39px 0 21px
+	&__inner
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		border-top: 1px solid rgba(45, 45, 45, 0.1)
+		border-bottom: 1px solid rgba(45, 45, 45, 0.1)
+		padding: 18px 0
+
+.copyright
+	font-size: 14px
+	line-height: 21px
+	margin: 0 0 0 20px
+	color: #C2C2C2
+
+.social
+	margin-left: auto
+	display: flex
+	a
+		color: $red
+		border: 1px solid $red
+		width: 30px
+		height: 30px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+		margin-right: 20px
+		&::before
+			transition: none
+		&:hover
+			background: $red
+			color: #fff
+		&:last-child
+			margin-right: 0
+
+.wpcf7-form
+	br
+		display: none !important
+
+.wpcf7-spinner
+	display: none !important
